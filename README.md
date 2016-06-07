@@ -1,5 +1,5 @@
 # Ivona, Speak!
-[![Build Status](https://img.shields.io/travis/Pythonity/ivona-speak.svg)][ivona speak github]
+[![Build Status](https://img.shields.io/travis/Pythonity/ivona-speak.svg)][ivona speak travis]
 [![PyPI Version](https://img.shields.io/pypi/v/ivona_speak.svg)][ivona speak pypi]
 [![Python Versions](https://img.shields.io/pypi/pyversions/ivona_speak.svg)][ivona speak pypi]
 [![License](https://img.shields.io/github/license/Pythonity/ivona-speak.svg)][license]
@@ -15,16 +15,16 @@ awesome) Python project then have a look at
 [python-ivona-api][ivona api github], which this script also uses.
 
 ## Installation
-With `pip` (recommended):
-```shell
+With `PyPI` (recommended):
+```
 $ pip3 install ivona_speak
 ```
 
-Without `pip`:
-```shell
+With `git clone`:
+```
 $ git clone https://github.com/Pythonity/ivona-speak
-$ pip install -r ivona-speak/requirements.txt
-$ cd icon-font-to-png/bin
+$ pip3 install -r ivona-speak/requirements.txt
+$ cd ivona-speak/bin
 ```
 
 ## Usage
@@ -123,6 +123,7 @@ Developed and maintained by [Pythonity][pythonity].
 
 Written by [Paweł Adamczak][pawelad].
 
+[ivona speak travis]: https://travis-ci.org/Pythonity/ivona-speak
 [ivona speak github]: https://github.com/Pythonity/ivona-speak
 [ivona speak pypi]: https://pypi.python.org/pypi/ivona_speak
 [license]: https://github.com/Pythonity/ivona-speak/blob/master/LICENSE
