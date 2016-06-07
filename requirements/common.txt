@@ -1,0 +1,4 @@
+ivona_api>=0.1.1
+click>=6.6
+click-default-group>=1.2
+PyYAML>=3.11

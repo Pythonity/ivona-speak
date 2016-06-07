@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+try:
+    # Installed system wide
+    from ivona_speak.command_line import cli
+except ImportError:
+    # Locally
+    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+    from ivona_speak.command_line import cli
+
+
+if __name__ == '__main__':
+    cli()

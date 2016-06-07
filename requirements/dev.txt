@@ -1,0 +1,8 @@
+-r common.txt
+pytest
+flaky
+tox
+twine
+pypandoc
+check-manifest
+coverage
