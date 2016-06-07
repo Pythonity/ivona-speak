@@ -73,7 +73,7 @@ $ ivona-speak list-voices --access-key 'YOUR_ACTUAL_ACCESS_KEY' --secret-key 'YO
 $ ivona-speak list-voices -a secrets.yaml
 ```
 
-Also, `synthesized` is the default subcommand so those do the same:
+Also, `synthesize` is the default subcommand so those do the same:
 ```
 $ ivona-speak synthesize -a secrets.yaml -o hello_world.mp3 'Hello world!'
 $ ivona-speak -a secrets.yaml -o hello_world.mp3 'Hello world!'
