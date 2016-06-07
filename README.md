@@ -79,14 +79,20 @@ $ ivona-speak synthesize -a secrets.yaml -o hello_world.mp3 'Hello world!'
 $ ivona-speak -a secrets.yaml -o hello_world.mp3 'Hello world!'
 ```
 
-List all available IVONA voices, and list them now:  
-`$ ivona-speak list-voices -a secrets.yaml`
+List all available IVONA voices, and list them now:
+```
+$ ivona-speak list-voices -a secrets.yaml
+```
 
-I want someone to say 'Hello world!', and say it quick:  
-`$ ivona-speak synthesize -a secrets.yaml -o hello_world.mp3 'Hello world!'`
+I want someone to say 'Hello world!', and say it quick:
+```
+$ ivona-speak synthesize -a secrets.yaml -o hello_world.mp3 'Hello world!'
+```
 
-She sounds so nice. I want someone special to respond her:  
-`$ ivona-speak synthesize -a secrets.yaml -o response.mp3 -n Joey 'How you doin?'`
+She sounds so nice. I want someone special to respond her:
+```
+$ ivona-speak synthesize -a secrets.yaml -o response.mp3 -n Joey 'How you doin?'
+```
 
 ### Example auth file
 ```
@@ -118,7 +124,7 @@ Developed and maintained by [Pythonity][pythonity].
 Written by [Paweł Adamczak][pawelad].
 
 [ivona speak github]: https://github.com/Pythonity/ivona-speak
-[ivona speak pypi]: https://pypi.python.org/pypi/ivona_peak
+[ivona speak pypi]: https://pypi.python.org/pypi/ivona_speak
 [license]: https://github.com/Pythonity/ivona-speak/blob/master/LICENSE
 [ivona]: https://www.ivona.com/
 [ivona keys]: http://developer.ivona.com/en/speechcloud/introduction.html#Credentials
