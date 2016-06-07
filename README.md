@@ -29,7 +29,7 @@ $ cd icon-font-to-png/bin
 
 ## Usage
 The script comes with two subcommands (`synthesize` is the default one):
-```shell
+```
 $ ivona-speak synthesize -h
 Usage: ivona-speak synthesize [OPTIONS] TEXT
 
@@ -47,7 +47,7 @@ Options:
   -h, --help                 Show this message and exit.
 ```
 
-```shell
+```
 $ ivona-speak list-voices -h
 Usage: ivona-speak list-voices [OPTIONS]
 
@@ -67,13 +67,17 @@ With above usage everything should be pretty clear, but in case it
 isn't:  
 
 You can provide keys either explicitly or put them in YAML file (one of
-those ways is required):  
-`$ ivona-speak list-voices --access-key 'YOUR_ACTUAL_ACCESS_KEY' --secret-key 'YOUR_ACTUAL_SECRET_KEY'`
-`$ ivona-speak list-voices -a secrets.yaml`
+those ways is required):
+```
+$ ivona-speak list-voices --access-key 'YOUR_ACTUAL_ACCESS_KEY' --secret-key 'YOUR_ACTUAL_SECRET_KEY'
+$ ivona-speak list-voices -a secrets.yaml
+```
 
-Also, `synthesized` is the default subcommand so those do the same:  
-`$ ivona-speak synthesize -a secrets.yaml -o hello_world.mp3 'Hello world!'`
-`$ ivona-speak -a secrets.yaml -o hello_world.mp3 'Hello world!'`
+Also, `synthesized` is the default subcommand so those do the same:
+```
+$ ivona-speak synthesize -a secrets.yaml -o hello_world.mp3 'Hello world!'
+$ ivona-speak -a secrets.yaml -o hello_world.mp3 'Hello world!'
+```
 
 List all available IVONA voices, and list them now:  
 `$ ivona-speak list-voices -a secrets.yaml`
@@ -85,7 +89,7 @@ She sounds so nice. I want someone special to respond her:
 `$ ivona-speak synthesize -a secrets.yaml -o response.mp3 -n Joey 'How you doin?'`
 
 ### Example auth file
-```shell
+```
 $ cat secrets.yaml
 access-key: YOUR_ACTUAL_ACCESS_KEY
 secret-key: YOUR_ACTUAL_SECRET_KEY
