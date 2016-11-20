@@ -48,7 +48,7 @@ def synthesize(access_key, secret_key, auth_file, output_file, voice_name,
         raise click.ClickException("Given auth keys are incorrect.")
 
     with click.open_file(output_file, 'wb') as file:
-        ivona_api.text_to_speech(text, file)
+        ivona_api.text_to_speech(text, file.name)
 
     click.secho(
         "File successfully saved as '{}'".format(output_file), fg='green'
