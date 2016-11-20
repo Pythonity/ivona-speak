@@ -7,15 +7,13 @@
 Python script that lets you easily convert passed text to synthesized audio
 files, with help of Amazon's [IVONA][ivona]. All you need is a pair of 
 [keys][ivona keys] and this script. Yes, that's *literally* everything you need
-to never speak again. If that's your
-thing of course.
+to never speak again. If that's your thing of course.
 
-If you want to use IVONA Speech Cloud directly inside your (probably awesome)
-Python project then have a look at [python-ivona-api][ivona api],
-which this script also uses.
+If you want to use IVONA Speech Cloud directly inside your Python project then
+have a look at [python-ivona-api][ivona api], which this script also uses.
 
 ## Installation
-With PyPI (recommended):
+From PyPI (recommended):
 ```
 $ pip install ivona_speak
 ```
@@ -23,7 +21,7 @@ $ pip install ivona_speak
 With `git clone`:
 ```
 $ git clone https://github.com/Pythonity/ivona-speak
-$ pip3 install -r ivona-speak/requirements.txt
+$ pip install -r ivona-speak/requirements.txt
 $ cd ivona-speak/bin
 ```
 
