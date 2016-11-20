@@ -35,7 +35,9 @@ def cli():
 def synthesize(access_key, secret_key, auth_file, output_file, voice_name,
                voice_language, codec, text):
     """Synthesize passed text and save it as an audio file"""
-    access_key, secret_key = _get_config_keys(access_key, secret_key, auth_file)
+    access_key, secret_key = _get_config_keys(
+        access_key, secret_key, auth_file,
+    )
 
     try:
         ivona_api = IvonaAPI(
@@ -64,7 +66,9 @@ def synthesize(access_key, secret_key, auth_file, output_file, voice_name,
               help="Filter voice by language.")
 def list_voices(access_key, secret_key, auth_file, voice_language):
     """List available Ivona voices"""
-    access_key, secret_key = _get_config_keys(access_key, secret_key, auth_file)
+    access_key, secret_key = _get_config_keys(
+        access_key, secret_key, auth_file,
+    )
 
     try:
         ivona_api = IvonaAPI(access_key, secret_key)
@@ -112,9 +116,10 @@ def _get_config_keys(access_key, secret_key, yaml_file):
             )
 
     if not access_key or not secret_key:
-        raise click.ClickException("Both access key and secret key are needed.")
+        raise click.ClickException("Both access key and secret key are needed")
 
     return access_key, secret_key
+
 
 if __name__ == '__main__':
     cli()
