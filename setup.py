@@ -1,38 +1,40 @@
 # -*- coding: utf-8 -*-
-from __future__ import print_function
-import sys
+from __future__ import absolute_import, unicode_literals
+
+import io
+import os
+import re
+
 from setuptools import setup, find_packages
-from setuptools.command.test import test as TestCommand
 
-
-class Tox(TestCommand):
-    user_options = [('tox-args=', 'a', "Arguments to pass to tox")]
-
-    def initialize_options(self):
-        TestCommand.initialize_options(self)
-        self.tox_args = None
-
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
-        import tox
-        import shlex
-        args = self.tox_args
-        if args:
-            args = shlex.split(self.tox_args)
-        errno = tox.cmdline(args=args)
-        sys.exit(errno)
 
 # Convert description from markdown to reStructuredText
 try:
     import pypandoc
-    description = pypandoc.convert('README.md', 'rst')
-except (IOError, ImportError):
+    description = pypandoc.convert('README.md', 'rst', 'markdown')
+except (OSError, ImportError):
     description = ''
+
+
+# Get package version number
+# Source: https://packaging.python.org/single_source_version/
+def read(*names, **kwargs):
+    with io.open(
+        os.path.join(os.path.dirname(__file__), *names),
+        encoding=kwargs.get('encoding', 'utf8')
+    ) as fp:
+        return fp.read()
+
+
+def find_version(*file_paths):
+    version_file = read(*file_paths)
+    version_match = re.search(
+        r"^__version__ = ['\"]([^'\"]*)['\"]",
+        version_file, re.M
+    )
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError("Unable to find version string.")
 
 
 setup(
@@ -40,7 +42,7 @@ setup(
     url='https://github.com/Pythonity/ivona-speak',
     download_url='https://github.com/Pythonity/ivona-speak/releases/latest',
     bugtrack_url='https://github.com/Pythonity/ivona-speak/issues',
-    version='0.1.1',
+    version=find_version('ivona_speak', '__init__.py'),
     license='MIT License',
     author='Pythonity',
     author_email='pythonity@pythonity.com',
@@ -51,13 +53,11 @@ setup(
     long_description=description,
     packages=find_packages(),
     include_package_data=True,
-    tests_require=['tox'],
-    cmdclass={'test': Tox},
     install_requires=[
-        'ivona_api>=0.1.1',
         'click>=6.6',
         'click-default-group>=1.2',
-        'PyYAML>=3.11',
+        'ivona_api>=0.1.2',
+        'PyYAML>=3.12',
     ],
     extras_require={
         'testing': ['pytest', 'flaky'],
@@ -71,8 +71,11 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Utilities',
     ],
 )
