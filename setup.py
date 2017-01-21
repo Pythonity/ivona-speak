@@ -57,7 +57,6 @@ setup(
         'click>=6.7',
         'click-default-group>=1.2',
         'ivona_api>=0.2.0',
-        'PyYAML>=3.12',
     ],
     extras_require={
         'testing': ['pytest', 'flaky'],
