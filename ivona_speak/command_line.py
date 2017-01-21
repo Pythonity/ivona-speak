@@ -59,8 +59,6 @@ def synthesize(access_key, secret_key, output_file, voice_name, voice_language,
               help="IVONA Speech Cloud access key.")
 @click.option('--secret-key', type=str,
               help="IVONA Speech Cloud secret key.")
-@click.option('--auth-file', '-a', type=click.File(),
-              help="Path to YAML file with 'access-key' and 'secret-key' set.")
 @click.option('--voice-language', '-l', type=str,
               help="Filter voice by language.")
 @click.option('--voice-gender', '-g', type=str,
