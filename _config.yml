@@ -1,0 +1,7 @@
+theme: jekyll-theme-leap-day
+
+gems:
+  - jekyll-default-layout
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
