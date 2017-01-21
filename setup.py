@@ -54,9 +54,9 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'click>=6.6',
+        'click>=6.7',
         'click-default-group>=1.2',
-        'ivona_api>=0.1.2',
+        'ivona_api>=0.2.0',
         'PyYAML>=3.12',
     ],
     extras_require={
@@ -76,6 +76,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Topic :: Utilities',
     ],
 )
