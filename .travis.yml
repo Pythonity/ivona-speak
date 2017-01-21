@@ -1,22 +1,19 @@
 language: python
 
-matrix:
-    include:
-        - os: linux
-          python: 2.7
-          env: TOXENV=py27
-        - os: linux
-          python: 3.4
-          env: TOXENV=py34
-        - os: linux
-          python: 3.5
-          env: TOXENV=py35
-        - os: linux
-          python: 3.5
-          env: TOXENV=flake8
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
 
 install:
   - pip install -r requirements/dev.txt
+  - pip install tox-travis
 
 script:
   - tox
+  - coverage run --source ivona_speak -m py.test
+  - coverage report -m
+
+after_success:
+  - coveralls
