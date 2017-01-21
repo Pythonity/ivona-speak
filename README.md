@@ -11,8 +11,8 @@ files, with help of Amazon's [IVONA][ivona]. All you need is a pair of
 to never speak again. If that's your thing of course.
 
 If you want to use IVONA Speech Cloud directly inside your Python project then
-you should have a look at [python-ivona-api][ivona api], which this script in
-the background.
+you should have a look at [python-ivona-api][ivona api], which this script
+uses in the background.
 
 ## Installation
 From PyPI (recommended):
