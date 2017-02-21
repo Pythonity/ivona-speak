@@ -9,6 +9,9 @@ from ivona_api import IvonaAPI
 from ivona_api.exceptions import IvonaAPIException
 
 
+click.disable_unicode_literals_warning = True
+
+
 @click.group(cls=DefaultGroup, default='synthesize', default_if_no_args=True)
 def cli():
     """
