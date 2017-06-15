@@ -105,7 +105,7 @@ Feel free to use, ask, fork, star, report bugs, fix them, suggest enhancements,
 add functionality and point out any mistakes. Thanks!
 
 ## Authors
-Developed and maintained by [Pythonity][pythonity].
+Developed and maintained by [Pythonity][pythonity], a group of Python enthusiasts who love open source, have a neat [blog][pythonity blog] and are available [for hire][pythonity].
 
 Written by [Paweł Adamczak][pawelad].
 
@@ -118,5 +118,6 @@ Written by [Paweł Adamczak][pawelad].
 [license]: https://github.com/Pythonity/ivona-speak/blob/master/LICENSE
 [pawelad]: https://github.com/pawelad
 [pypi]: https://pypi.python.org/pypi/ivona_speak
-[pythonity]: http://pythonity.com/
+[pythonity]: https://pythonity.com/
+[pythonity blog]: http://blog.pythonity.com/
 [travis]: https://travis-ci.org/Pythonity/ivona-speak
