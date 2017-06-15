@@ -56,10 +56,10 @@ setup(
     install_requires=[
         'click>=6.7',
         'click-default-group>=1.2',
-        'ivona_api>=0.2.0',
+        'ivona_api>=0.3.0',
     ],
     extras_require={
-        'testing': ['pytest', 'flaky'],
+        'testing': ['pytest'],
     },
     scripts=['bin/ivona-speak'],
     keywords='amazon ivona text to speech synthesize',
