@@ -58,8 +58,8 @@ $ ivona-speak --access-key 'YOUR_ACTUAL_ACCESS_KEY' --secret-key 'YOUR_ACTUAL_SE
 or export them as environment variables:
 
 ```
-$ export IVONA_ACCESS_KEY="YOUR_ACTUAL_ACCESS_KEY"
-$ export IVONA_SECRET_KEY="YOUR_ACTUAL_SECRET_KEY"
+$ export IVONA_ACCESS_KEY='...'
+$ export IVONA_SECRET_KEY='...'
 $ ivona-speak list-voices
 ```
 
@@ -92,9 +92,9 @@ To run tests yourself you need to set environment variables with secret
 and access keys before running `tox` inside the repository:
 
 ```shell
-$ pip install -r requirements/dev.txt
-$ export IVONA_ACCESS_KEY="YOUR_ACTUAL_ACCESS_KEY"
-$ export IVONA_SECRET_KEY="YOUR_ACTUAL_SECRET_KEY"
+$ pip install tox
+$ export IVONA_ACCESS_KEY='..'
+$ export IVONA_SECRET_KEY='..'
 $ tox
 ```
 
@@ -105,9 +105,13 @@ Feel free to use, ask, fork, star, report bugs, fix them, suggest enhancements,
 add functionality and point out any mistakes. Thanks!
 
 ## Authors
-Developed and maintained by [Pythonity][pythonity], a group of Python enthusiasts who love open source, have a neat [blog][pythonity blog] and are available [for hire][pythonity].
+Developed and maintained by [Pythonity][pythonity], a group of Python
+enthusiasts who love open source, have a neat [blog][pythonity blog] and are
+available [for hire][pythonity].
 
 Written by [Paweł Adamczak][pawelad].
+
+Released under [MIT License][license].
 
 
 [coveralls]: https://coveralls.io/github/Pythonity/ivona-speak
