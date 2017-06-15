@@ -1,19 +1,23 @@
 language: python
 
+
 python:
   - "2.7"
   - "3.4"
   - "3.5"
   - "3.6"
 
+
 install:
   - pip install -r requirements/dev.txt
   - pip install tox-travis
+
 
 script:
   - tox
   - coverage run --source ivona_speak -m py.test
   - coverage report -m
+
 
 after_success:
   - coveralls

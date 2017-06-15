@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+ivona_speak CLI related code
+"""
 from __future__ import absolute_import, unicode_literals
 
 from itertools import groupby
