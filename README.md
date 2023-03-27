@@ -125,3 +125,5 @@ Released under [MIT License][license].
 [pythonity]: https://pythonity.com/
 [pythonity blog]: http://blog.pythonity.com/
 [travis]: https://travis-ci.org/Pythonity/ivona-speak
+
+Have fun!
